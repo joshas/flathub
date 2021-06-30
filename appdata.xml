@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.fceux.FCEUX.desktop</id>
+  <name>FCEUX</name>
+  <summary>The all in one NES/Famicom/Dendy Emulator</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0</project_license>
+  <content_rating type="oars-1.0" />
+  <description>
+    <p>
+      FCEUX is a Nintendo Entertainment System (NES), Famicom, Famicom 
+      Disk System (FDS), and Dendy emulator. It supports NTSC (USA/JPN),
+      PAL (European), and NTSC-PAL Hybrid modes. It supports both
+      Windows and SDL versions for cross compatibility.
+    </p>
+    <p>
+      The FCEUX concept is that of an "all in one" emulator that offers
+      accurate emulation and the best options for both casual play and a
+      variety of more advanced emulator functions. For pro users, FCEUX
+      offers tools for debugging, rom-hacking, map making, Tool-assisted
+      movies, and Lua scripting.
+    </p>
+  </description>
+  <url type="bugtracker">https://github.com/TASVideos/fceux/issues</url>
+  <url type="help">https://fceux.com/web/documentation.html</url>
+  <url type="homepage">https://fceux.com/web/home.html</url>
+  <screenshots>
+    <screenshot type="default">https://raw.githubusercontent.com/flathub/com.fceux.FCEUX/master/screenshots/1.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/com.fceux.FCEUX/master/screenshots/2.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/com.fceux.FCEUX/master/screenshots/3.png</screenshot>
+  </screenshots>
+  <releases>
+    <release version="2.4.0" date="2021-06-24">
+      <url>https://fceux.com/web/help/WhatsNew240.html</url>
+      <description>
+        <p>
+          The 2.4.0 release primarily focuses on improving
+          stability and capabilities of the Qt/SDL GUI port.
+        </p>
+      </description>
+    </release>
+  </releases>
+</component>

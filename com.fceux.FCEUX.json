@@ -1,0 +1,72 @@
+{
+	"app-id": "com.fceux.FCEUX",
+	"runtime": "org.kde.Platform",
+	"sdk": "org.kde.Sdk",
+	"runtime-version": "5.15",
+	"command": "fceux",
+	"rename-desktop-file": "fceux.desktop",
+	"finish-args": [
+		"--device=all",
+		"--filesystem=host:ro",
+		"--share=ipc",
+		"--socket=fallback-x11",
+		"--socket=pulseaudio",
+		"--system-talk-name=org.freedesktop.UPower",
+		"--talk-name=org.freedesktop.ScreenSaver",
+		"--env=FCEUX_HOME=/var/config"
+	],
+	"cleanup": [
+		"/include",
+		"/lib/*.a",
+		"/share/man",
+		"/share/pixmaps",
+		"/share/fceux/*.chm",
+		"/share/fceux/*.dll"
+	],
+	"modules": [
+		{
+			"name": "minizip",
+			"subdir": "contrib/minizip",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://zlib.net/zlib-1.2.11.tar.xz",
+					"sha256": "4ff941449631ace0d4d203e3483be9dbc9da454084111f97ea0a2114e19bf066"
+				},
+				{
+					"type": "script",
+					"dest-filename": "contrib/minizip/autogen.sh",
+					"commands": [
+						"autoreconf -ifv"
+					]
+				}
+			]
+		},
+		{
+			"name": "fceux",
+			"buildsystem": "cmake",
+			"config-opts": [
+				"-DCMAKE_BUILD_TYPE=Release"
+			],
+			"build-commands": [
+				"install -Dm644 appdata.xml /app/share/appdata/fceux.appdata.xml"
+			],
+			"post-install": [
+				"sed -i 's,/usr/bin/fceux,/app/bin/fceux,' /app/share/applications/fceux.desktop",
+				"desktop-file-edit --set-icon=$FLATPAK_ID /app/share/applications/fceux.desktop",
+				"install -Dm644 /app/share/pixmaps/fceux1.png /app/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
+			],
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://github.com/TASVideos/fceux/archive/refs/tags/fceux-2.4.0.tar.gz",
+					"sha256": "a5b8749c80aac5a847348992b6a0b1ee964dbc173fe980bb95587d04aca39bc0"
+				},
+				{
+					"type": "file",
+					"path": "appdata.xml"
+				}
+			]
+		}
+	]
+}
