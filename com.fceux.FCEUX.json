@@ -35,7 +35,8 @@
 				},
 				{
 					"type": "script",
-					"dest-filename": "contrib/minizip/autogen.sh",
+					"dest": "contrib/minizip/",
+					"dest-filename": "autogen.sh",
 					"commands": [
 						"autoreconf -ifv"
 					]
@@ -59,8 +60,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/TASVideos/fceux/archive/refs/tags/fceux-2.4.0.tar.gz",
-					"sha256": "a5b8749c80aac5a847348992b6a0b1ee964dbc173fe980bb95587d04aca39bc0"
+					"url": "https://github.com/TASVideos/fceux/archive/refs/tags/fceux-2.5.0.tar.gz",
+					"sha256": "532d6e1196a07712df16d81b10563edcb476ae74215cf4ff82716622585df460"
 				},
 				{
 					"type": "file",

@@ -30,6 +30,16 @@
     <screenshot>https://raw.githubusercontent.com/flathub/com.fceux.FCEUX/master/screenshots/3.png</screenshot>
   </screenshots>
   <releases>
+    <release version="2.5.0" date="2021-10-21">
+      <url>https://fceux.com/web/help/WhatsNew250.html</url>
+      <description>
+        <p>
+          The 2.5.0 release features significant enhancements and
+          improvements to the Qt/SDL port. Specifically the debug tools
+          and AVI recording capabilities.
+        </p>
+      </description>
+    </release>
     <release version="2.4.0" date="2021-06-24">
       <url>https://fceux.com/web/help/WhatsNew240.html</url>
       <description>
