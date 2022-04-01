@@ -2,7 +2,7 @@
 	"app-id": "com.fceux.FCEUX",
 	"runtime": "org.kde.Platform",
 	"sdk": "org.kde.Sdk",
-	"runtime-version": "5.15",
+	"runtime-version": "5.15-21.08",
 	"command": "fceux",
 	"rename-desktop-file": "fceux.desktop",
 	"finish-args": [
@@ -30,8 +30,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://zlib.net/zlib-1.2.11.tar.xz",
-					"sha256": "4ff941449631ace0d4d203e3483be9dbc9da454084111f97ea0a2114e19bf066"
+					"url": "https://zlib.net/zlib-1.2.12.tar.xz",
+					"sha256": "7db46b8d7726232a621befaab4a1c870f00a90805511c0e0090441dac57def18"
 				},
 				{
 					"type": "script",
@@ -50,7 +50,7 @@
 				"-DCMAKE_BUILD_TYPE=Release"
 			],
 			"build-commands": [
-				"install -Dm644 appdata.xml /app/share/appdata/fceux.appdata.xml"
+				"install -Dm644 appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml"
 			],
 			"post-install": [
 				"sed -i 's,/usr/bin/fceux,/app/bin/fceux,' /app/share/applications/fceux.desktop",
@@ -60,8 +60,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/TASVideos/fceux/archive/refs/tags/fceux-2.5.0.tar.gz",
-					"sha256": "532d6e1196a07712df16d81b10563edcb476ae74215cf4ff82716622585df460"
+					"url": "https://github.com/TASVideos/fceux/archive/refs/tags/fceux-2.6.4.tar.gz",
+					"sha256": "7211d768b6b973ebb161bffb823b81dad97e96354ee0a61bb69ff33520def87a"
 				},
 				{
 					"type": "file",

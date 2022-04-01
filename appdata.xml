@@ -30,6 +30,14 @@
     <screenshot>https://raw.githubusercontent.com/flathub/com.fceux.FCEUX/master/screenshots/3.png</screenshot>
   </screenshots>
   <releases>
+    <release version="2.6.4" date="2022-04-24">
+      <url>https://fceux.com/web/help/WhatsNew264.html</url>
+      <description>
+        <p>
+          The 2.6.4 release is a maintenance update that fixes a couple bugs for the Qt/SDL port.
+        </p>
+      </description>
+    </release>
     <release version="2.5.0" date="2021-10-21">
       <url>https://fceux.com/web/help/WhatsNew250.html</url>
       <description>
