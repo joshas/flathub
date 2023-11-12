@@ -2,7 +2,7 @@
 	"app-id": "com.fceux.FCEUX",
 	"runtime": "org.kde.Platform",
 	"sdk": "org.kde.Sdk",
-	"runtime-version": "5.15-21.08",
+	"runtime-version": "5.15-23.08",
 	"command": "fceux",
 	"rename-desktop-file": "fceux.desktop",
 	"finish-args": [
@@ -10,6 +10,7 @@
 		"--filesystem=host:ro",
 		"--share=ipc",
 		"--socket=fallback-x11",
+		"--socket=wayland",
 		"--socket=pulseaudio",
 		"--system-talk-name=org.freedesktop.UPower",
 		"--talk-name=org.freedesktop.ScreenSaver",
@@ -30,8 +31,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://zlib.net/zlib-1.2.13.tar.xz",
-					"sha256": "d14c38e313afc35a9a8760dadf26042f51ea0f5d154b0630a31da0540107fb98"
+					"url": "https://zlib.net/zlib-1.3.tar.xz",
+					"sha256": "8a9ba2898e1d0d774eca6ba5b4627a11e5588ba85c8851336eb38de4683050a7"
 				},
 				{
 					"type": "script",
@@ -60,8 +61,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/TASVideos/fceux/archive/refs/tags/fceux-2.6.4.tar.gz",
-					"sha256": "7211d768b6b973ebb161bffb823b81dad97e96354ee0a61bb69ff33520def87a"
+					"url": "https://github.com/TASEmulators/fceux/archive/refs/tags/v2.6.6.tar.gz",
+					"sha256": "0320241d45c6d609f7aeb6f85fdd9019552047206b0864a7f9fddff15b004daa"
 				},
 				{
 					"type": "file",
